@@ -13,7 +13,7 @@ This project transforms raw e-commerce order data into actionable business intel
 Below is a closer look at the core interactive elements and visual components built into the dashboard, along with their business purpose and technical implementation.
 ---
 ### 1. Executive KPI Cards Panel
-<img width="1920" height="1080" alt="KPI" src="https://github.com/user-attachments/assets/9bdcecfd-13ff-4d5d-afa4-e6c6e37a28f5" />
+![KPI Cards](Assets/KPI.png)
 
 * **Purpose:** Provides stakeholders with an immediate, high-level snapshot of overall business health—showcasing core metrics including **Total Revenue ($5,109,776)**, **Total Orders (5,000)**, **Average Order Value ($1,022)**, and **Repeat Customer Rate (99%)**.
 * **How It Was Built:** 
