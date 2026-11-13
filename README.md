@@ -4,7 +4,7 @@ An interactive, dark-mode Business Intelligence dashboard built in Microsoft Exc
 ---
 ## Dashboard Preview
 
-<img width="800" height="430" alt="ezgif com-video-to-gif-converter (1)" src="https://github.com/user-attachments/assets/9defb046-7c70-4384-8dd4-2830de1f9600" />
+![Dashboard](Assets/project-gif.gif)
 
 ## 🚀 Project Overview
 This project transforms raw e-commerce order data into actionable business intelligence. It is designed to provide stakeholders with an executive-level overview of financial metrics, customer loyalty, logistics turnaround times, and product category performance—all within a single, interactive viewport.
