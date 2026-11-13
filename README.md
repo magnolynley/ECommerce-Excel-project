@@ -13,45 +13,57 @@ This project transforms raw e-commerce order data into actionable business intel
 Below is a closer look at the core interactive elements and visual components built into the dashboard, along with their business purpose and technical implementation.
 ---
 ### 1. Executive KPI Cards Panel
-![KPI Cards](Assets/KPI.png)
 
-* **Purpose:** Provides stakeholders with an immediate, high-level snapshot of overall business health—showcasing core metrics including **Total Revenue ($5,109,776)**, **Total Orders (5,000)**, **Average Order Value ($1,022)**, and **Repeat Customer Rate (99%)**.
-* **How It Was Built:** 
-  * Created custom styled card containers featuring a high-contrast dark background paired with peach/orange label headers.
-  * Linked the numeric values dynamically to underlying PivotTable summary cells using direct cell references (`=Sheet!Cell`), ensuring real-time updates when filters are modified.
+![Executive KPI Cards Panel](Assets/KPI.png)
+
+* **Business Value & Purpose:** Delivers an immediate, high-level executive snapshot of overall business health, tracking critical core metrics: **Total Revenue ($5,109,776)**, **Total Orders (5,000)**, **Average Order Value ($1,022)**, and **Repeat Customer Rate (99%)**.
+* **Technical Architecture & Implementation:**
+  * **Dynamic Data Pipeline:** Leveraged structured **helper cells** and advanced lookup formulas (`INDEX/MATCH`) to cleanly extract and reference aggregated values from raw PivotTables, bypassing layout rigidity.
+  * **Real-Time Interactivity:** Established direct cell referencing (`=Sheet!Cell`) linking card numeric outputs directly to backend summary calculations, guaranteeing instant, dynamic updates whenever global filters or slicers are modified.
+* **UI/UX & Design Engineering:** 
+  * Designed custom container shapes configured with a professional, high-contrast dark-mode aesthetic.
+  * Applied deliberate color theory featuring distinct peach/orange label headers paired with crisp, weighted typography to optimize visual hierarchy and direct executive attention to high-impact financial metrics.
 ---
 ### 2. Executive Summary & Key Insights Panel
-<img width="1920" height="1080" alt="summary_insights" src="https://github.com/user-attachments/assets/2b0befe0-ac8d-4b6f-a1e8-b04fd1ee59f7" />
 
-* **Purpose:** Provides a structured, text-based narrative breakdown of business performance directly on the dashboard—highlighting key takeaways in Revenue, Customer Retention, Logistics, Product Satisfaction, and Discount Trends for quick executive scanning.
-* **How It Was Built:** 
-  * Designed a clean, rounded text box panel with a warm peach/tan background to contrast against the dark dashboard theme.
-  * Populated with concise bullet points derived from underlying PivotTable metrics to tell a clear data story without overwhelming the audience with raw numbers.
+![Executive Summary Panel](Assets/summary_insights.png)
+
+* **Business Value & Purpose:** Provides a structured, text-based narrative breakdown of core business performance directly on the dashboard. Designed specifically for **rapid executive scanning**, delivering immediate answers and high-level takeaways for stakeholders who require instant clarity without sorting through granular chart details.
+* **Technical Architecture & UI/UX Design:**
+  * **Visual Contrast & Readability:** Built a dedicated, rounded text box panel utilizing a warm peach/tan background tone to create a sharp, intentional contrast against the dark-mode dashboard theme.
+  * **Data Storytelling:** Populated with concise, bulleted business insights synthesized directly from underlying PivotTable metrics, transforming raw data into a clear, compelling narrative.
 ---
 ### 3. Interactive Slicers & Timeline Filter
-<img width="1920" height="1080" alt="slicers_timeline_filter" src="https://github.com/user-attachments/assets/c676e2f3-80c9-40fd-951e-a220455530c2" />
 
-* **Purpose:** Empowers users to dynamically filter and slice performance data across multiple dimensions—**Region**, **Date (Timeline)**, **Payment Method**, and **Product Category**—for interactive exploration.
-* **How It Was Built:** 
-  * Inserted native Excel **Slicers** and a **Timeline** control connected to the primary data models.
-  * Applied a custom color palette to match the dark-mode aesthetic and synchronized all slicers across every chart using **Report Connections** for seamless multi-dimensional cross-filtering.
+![Interactive Slicers Panel](Assets/slicers_timeline_filter.png)
+
+* **Business Value & Purpose:** Empowers users and stakeholders to dynamically filter and slice performance data across multiple dimensions—including **Region, Date (Timeline), Payment Method, and Product Category**—enabling seamless, ad-hoc exploratory analysis.
+* **Technical Architecture & Implementation:**
+  * **Interactive Controls:** Integrated native Excel Slicers and a Timeline control directly linked to the underlying PivotTables and data model.
+  * **Cross-Filtering Synchronization:** Configured **Report Connections** to synchronize all slicers across multiple charts simultaneously, ensuring that filtering one component instantly updates the entire dashboard for a unified, multi-dimensional user experience.
+* **UI/UX & Design Engineering:** Styled with custom color palettes meticulously matched to the dashboard's dark-mode theme to maintain a cohesive, professional aesthetic throughout the interface.
 ---
 ### 4. "Reset All Filters" Action Button
-<img width="1920" height="1080" alt="reset_filters" src="https://github.com/user-attachments/assets/c4149c47-196b-4184-b0a8-305578da612c" />
 
-* **Purpose:** Improves user experience (UX) by enabling executives and clients to clear multiple active filter states simultaneously and restore the default full-dataset view with a single click.
-* **How It Was Built:** 
-  * Designed a custom action button shape positioned strategically above the filter panel.
-  * Linked a lightweight **VBA Macro** to target active SlicerCaches and clear selections instantly across the workbook.
+![Reset All Filters Button](Assets/clear_filters.png)
+
+* **Business Value & Purpose:** Dramatically improves user experience (UX) by eliminating the friction of manually clearing multiple slicers individually. Enables executives and stakeholders to wipe all active filter states simultaneously and restore the default full-dataset view with a single click.
+* **Technical Architecture & Implementation:**
+  * **Custom Action Interface:** Designed a sleek, custom button shape positioned strategically near the filter panel for intuitive and immediate accessibility.
+  * **VBA Macro Automation:** Programmed and linked a lightweight VBA Macro targeting active `SlicerCaches`, executing instant multi-filter clearance across the workbook to optimize workflow efficiency and user interaction.
 ---
 
 ### 5. Performance & Operational Charts Grid
-<img width="1920" height="1080" alt="charts" src="https://github.com/user-attachments/assets/5237c649-5131-4b78-a85d-cf5b38068604" />
 
-* **Purpose:** Translates transaction rows into visual insights—tracking **Revenue by Product Category**, **Customer Segmentation**, **Average Delivery Days**, **Revenue by Payment Method**, **Revenue Over Time**, and **Average Customer Rating**.
-* **How It Was Built:** 
-  * Built dedicated backend PivotTables for each chart category to maintain fast calculation performance.
-  * Formatted PivotCharts by stripping away clutter, gridlines, and field buttons, applying a consistent warm orange data series theme tailored to the dark-mode UI/UX layout.
+![Performance Charts Grid](Assets/charts.png)
+
+* **Business Value & Purpose:** Translates raw transactional rows into clear, visual insights—tracking critical metrics such as **Revenue by Product Category, Customer Segmentation, Average Delivery Days, Revenue by Payment Method, Revenue Over Time, and Average Customer Rating**.
+* **Technical Architecture & Implementation:**
+  * **Optimized Data Models:** Built dedicated backend PivotTables for each chart category to maintain fast, efficient calculation performance across the workbook.
+  * **PivotChart Integration:** Inserted and configured dynamic PivotCharts directly linked to underlying data summaries, selecting the optimal chart type (bar, column, donut/pie, etc.) best suited for each specific metric's data distribution.
+* **UI/UX & Design Engineering:** 
+  * Cleaned up visual clutter by stripping away unnecessary gridlines and default field buttons.
+  * Applied a consistent warm orange data series theme meticulously tailored to complement the dashboard's dark-mode layout, ensuring high legibility and a polished, executive-ready appearance.
 ---
 ## 📌 Key Metrics & Insights
 * **Total Revenue:** Tracked **$5,109,776** across **5,000 orders** with an Average Order Value (AOV) of **$1,022**.
@@ -62,10 +74,17 @@ Below is a closer look at the core interactive elements and visual components bu
 
 ---
 
-## 🛠️ Tools, Techniques, & Features
-* **Data Modeling & Preparation:** Excel Tables, Pivot Tables, Advanced Formulas (`YEAR`, `AVERAGE`, `SUM`,`INDEX`,`MATCH`,`Macro`,`DAX`).
-* **UI/UX & Design:** Custom dark-mode aesthetic with warm accents, structured grid layout, and hidden gridlines for a clean, application-like feel.
-* **Interactivity:** Synchronized **Slicers** allowing multi-dimensional cross-filtering by Region, Date, Payment Method, and Product Category.
+### 🛠️ Tools, Techniques, & Features
+
+* **Data Modeling & Architecture:** 
+  * Structured **Excel Tables** and **PivotTables** as the core backend foundation.
+  * Advanced formulas and lookups (`INDEX`, `MATCH`, `SUM`, `AVERAGE`, `YEAR`, `DAX`) paired with **Helper Cells** for dynamic and flexible metric calculations.
+* **Automation & Interactivity:** 
+  * **Synchronized Slicers & Timeline Filter** enabling multi-dimensional cross-filtering across Region, Date, Payment Method, and Product Category.
+  * Lightweight **VBA Macro** targeting active `SlicerCaches` to execute instant 1-click **"Reset All Filters"** automation.
+* **UI/UX & Visual Design:** 
+  * Custom dark-mode aesthetic featuring high-contrast warm orange/peach accents, intentional **Visual Hierarchy**, and custom container shapes.
+  * Polished application-like layout built by stripping away unnecessary gridlines and default chart clutter for an executive-ready finish.
 
 ---
 
