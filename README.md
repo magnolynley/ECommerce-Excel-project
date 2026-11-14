@@ -95,16 +95,6 @@ Below is a closer look at the core interactive elements and visual components bu
 
 ---
 
-### 💻 How to Use
-
-1. Download the `.xlsm` workbook from the `workbook/` folder.
-2. Open the file in Microsoft Excel (Desktop version recommended for full VBA & Slicer support).
-3. If prompted for write access or a password, select **Read Only** to explore the dashboard safely without altering the underlying data structure.
-4. Click **Enable Content** on the yellow security bar to activate the "Reset All Filters" macro (if blocked by Windows, right-click the downloaded file > *Properties* > check *Unblock*).
-5. Use the Slicers and Timeline on the left panel to filter metrics dynamically, and click **Reset All Filters** to restore the default view.
-
----
-
 ### 📁 Repository Structure
 
 ```text
@@ -113,3 +103,14 @@ Below is a closer look at the core interactive elements and visual components bu
 ├── workbook/
 │   └── Ecommerce Sales Dashboard Project Portfolio.xlsm
 └── README.md
+```
+---
+
+### 💻 How to Use
+
+1. Download the `.xlsm` workbook from the `workbook/` folder.
+2. Open the file in Microsoft Excel (Desktop version recommended for full VBA & Slicer support).
+3. If prompted for write access or a password, select **Read Only** to explore the dashboard safely without altering the underlying data structure.
+4. Click **Enable Content** on the yellow security bar to activate the "Reset All Filters" macro (if blocked by Windows, right-click the downloaded file > *Properties* > check *Unblock*).
+5. Use the Slicers and Timeline on the left panel to filter metrics dynamically, and click **Reset All Filters** to restore the default view.
+
