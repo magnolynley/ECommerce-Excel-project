@@ -88,9 +88,11 @@ Below is a closer look at the core interactive elements and visual components bu
 
 ---
 
-## 📂 Repository Structure
+### 📁 Repository Structure
+
 ```text
-├── ecommerce-sales-performance-dashboard.xlsx   # Main Excel Workbook containing Data & Dashboard
-├── assets/
-│   └── dashboard-demo.gif                       # Interactive preview GIF
-└── README.md                                    # Project documentation
+├── Assets/
+│   └── dashboard-preview.png
+├── workbook/
+│   └── Ecommerce Sales Dashboard Project Portfolio.xlsm
+└── README.md
