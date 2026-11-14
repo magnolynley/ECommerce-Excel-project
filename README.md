@@ -52,7 +52,7 @@ Below is a closer look at the core interactive elements and visual components bu
 ---
 ### 4. "Reset All Filters" Action Button
 
-![Reset All Filters Button](Assets/clear_filters.png)
+![Reset All Filters Button](Assets/reset_filters.png)
 
 * **Business Value & Purpose:** Dramatically improves user experience (UX) by eliminating the friction of manually clearing multiple slicers individually. Enables executives and stakeholders to wipe all active filter states simultaneously and restore the default full-dataset view with a single click.
 * **Technical Architecture & Implementation:**
