@@ -1,17 +1,24 @@
 # 📊 E-Commerce Sales Performance Dashboard
 
 An interactive, dark-mode Business Intelligence dashboard built in Microsoft Excel to analyze e-commerce sales performance, operational fulfillment, and customer satisfaction.
+
 ---
+
 ## Dashboard Preview
 
 ![Dashboard](Assets/project-gif.gif)
 
 ## 🚀 Project Overview
 This project transforms raw e-commerce order data into actionable business intelligence. It is designed to provide stakeholders with an executive-level overview of financial metrics, customer loyalty, logistics turnaround times, and product category performance—all within a single, interactive viewport.  
+
 ---
+
+
 ## 🔍 Dashboard Component Breakdown
 Below is a closer look at the core interactive elements and visual components built into the dashboard, along with their business purpose and technical implementation.
+
 ---
+
 ### 1. Executive KPI Cards Panel
 
 ![Executive KPI Cards Panel](Assets/KPI.png)
