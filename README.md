@@ -7,7 +7,7 @@ An interactive, dark-mode Business Intelligence dashboard built in Microsoft Exc
 ![Dashboard](Assets/project-gif.gif)
 
 ## 🚀 Project Overview
-This project transforms raw e-commerce order data into actionable business intelligence. It is designed to provide stakeholders with an executive-level overview of financial metrics, customer loyalty, logistics turnaround times, and product category performance—all within a single, interactive viewport.
+This project transforms raw e-commerce order data into actionable business intelligence. It is designed to provide stakeholders with an executive-level overview of financial metrics, customer loyalty, logistics turnaround times, and product category performance—all within a single, interactive viewport.  
 ---
 ## 🔍 Dashboard Component Breakdown
 Below is a closer look at the core interactive elements and visual components built into the dashboard, along with their business purpose and technical implementation.
@@ -77,7 +77,7 @@ Below is a closer look at the core interactive elements and visual components bu
 ### 🛠️ Tools, Techniques, & Features
 
 * **Data Modeling & Architecture:** 
-  * Structured **Excel Tables** and **PivotTables** as the core backend foundation.
+  * Structured **Excel Tables**, ** Power Query** and **PivotTables** as the core backend foundation.
   * Advanced formulas and lookups (`INDEX`, `MATCH`, `SUM`, `AVERAGE`, `YEAR`, `DAX`) paired with **Helper Cells** for dynamic and flexible metric calculations.
 * **Automation & Interactivity:** 
   * **Synchronized Slicers & Timeline Filter** enabling multi-dimensional cross-filtering across Region, Date, Payment Method, and Product Category.
