@@ -79,6 +79,12 @@ Below is a closer look at the core interactive elements and visual components bu
 * **Product Performance & Satisfaction:** Cross-examined revenue vs. customer satisfaction ratings—revealing *Beauty* and *Clothing* as top revenue and satisfaction leaders (~3.0/5 rating).
 * **Discount Tracking:** Monitored yearly average discount trends to safeguard profit margins and evaluate promotional impact.
 
+     | Metric | Value |
+     | :--- | :--- |
+     | **Total Revenue** | $5,109,776 |
+     | **Total Orders** | 5,000 |
+     | **Average Order Value (AOV)** | $1,022 |
+     | **Repeat Customer Percentage** | 99% |
 ---
 
 ### 🛠️ Tools, Techniques, & Features
