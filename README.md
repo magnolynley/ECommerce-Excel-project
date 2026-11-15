@@ -25,12 +25,20 @@ Below is a closer look at the core interactive elements and visual components bu
 
 * **Business Value & Purpose:** Delivers an immediate, high-level executive snapshot of overall business health, tracking critical core metrics: **Total Revenue ($5,109,776)**, **Total Orders (5,000)**, **Average Order Value ($1,022)**, and **Repeat Customer Rate (99%)**.
 * **Technical Architecture & Implementation:**
-  * **Dynamic Data Pipeline:** Leveraged structured **helper cells** and advanced lookup formulas (`INDEX/MATCH`) to cleanly extract and reference aggregated values from raw PivotTables, bypassing layout rigidity.
-  * **Real-Time Interactivity:** Established direct cell referencing (`=Sheet!Cell`) linking card numeric outputs directly to backend summary calculations, guaranteeing instant, dynamic updates whenever global filters or slicers are modified.
+    * **Real-Time Interactivity:** Established multi-dimensional cross-filtering via synchronized Slicers and Timelines.
+  * **Resilient Data Pipeline & Backend Calculation:** To ensure the front-end dashboard remains 100% dynamic and immune to layout shifts when users interact with global Slicers, I engineered an isolated backend calculation pipeline:
+    * **Dedicated Calculation Engine (`Customers` Tab):** Raw PivotTables aggregate metrics behind the scenes on a dedicated backend sheet, keeping the dashboard canvas clean and uncluttered.
+    * **Bulletproof `INDEX/MATCH` Anchoring:** Protected against layout shifts caused by expanding or contracting PivotTable rows by locking lookups to static markers like `"Grand Total"`:
+```excel
+=INDEX($H$7:$H$10, MATCH("Grand Total", $G$7:$G$10, 0))
+```
+  * **Front-End Shape Binding:** Front-end KPI container shapes are dynamically linked directly to these isolated helper cells via the formula bar (using =Customers!B21), guaranteeing instant, error-free reactivity across global Slicers without breaking when PivotTables expand or contract.
 * **UI/UX & Design Engineering:** 
   * Designed custom container shapes configured with a professional, high-contrast dark-mode aesthetic.
   * Applied deliberate color theory featuring distinct peach/orange label headers paired with crisp, weighted typography to optimize visual hierarchy and direct executive attention to high-impact financial metrics.
+  
 ---
+
 ### 2. Executive Summary & Key Insights Panel
 
 ![Executive Summary Panel](Assets/summary.jpg)
