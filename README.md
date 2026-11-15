@@ -21,7 +21,7 @@ Below is a closer look at the core interactive elements and visual components bu
 
 ### 1. Executive KPI Cards Panel
 
-![Executive KPI Cards Panel](Assets/KPI.png)
+![Executive KPI Cards Panel](Assets/KPI.jpg)
 
 * **Business Value & Purpose:** Delivers an immediate, high-level executive snapshot of overall business health, tracking critical core metrics: **Total Revenue ($5,109,776)**, **Total Orders (5,000)**, **Average Order Value ($1,022)**, and **Repeat Customer Rate (99%)**.
 * **Technical Architecture & Implementation:**
@@ -33,7 +33,7 @@ Below is a closer look at the core interactive elements and visual components bu
 ---
 ### 2. Executive Summary & Key Insights Panel
 
-![Executive Summary Panel](Assets/summary_insights.png)
+![Executive Summary Panel](Assets/summary.jpg)
 
 * **Business Value & Purpose:** Provides a structured, text-based narrative breakdown of core business performance directly on the dashboard. Designed specifically for **rapid executive scanning**, delivering immediate answers and high-level takeaways for stakeholders who require instant clarity without sorting through granular chart details.
 * **Technical Architecture & UI/UX Design:**
@@ -42,7 +42,7 @@ Below is a closer look at the core interactive elements and visual components bu
 ---
 ### 3. Interactive Slicers & Timeline Filter
 
-![Interactive Slicers Panel](Assets/slicers_timeline_filter.png)
+![Interactive Slicers Panel](Assets/slicers_timeline.jpg)
 
 * **Business Value & Purpose:** Empowers users and stakeholders to dynamically filter and slice performance data across multiple dimensions—including **Region, Date (Timeline), Payment Method, and Product Category**—enabling seamless, ad-hoc exploratory analysis.
 * **Technical Architecture & Implementation:**
@@ -52,7 +52,7 @@ Below is a closer look at the core interactive elements and visual components bu
 ---
 ### 4. "Reset All Filters" Action Button
 
-![Reset All Filters Button](Assets/reset_filters.png)
+![Reset All Filters Button](Assets/clear_filters.jpg)
 
 * **Business Value & Purpose:** Dramatically improves user experience (UX) by eliminating the friction of manually clearing multiple slicers individually. Enables executives and stakeholders to wipe all active filter states simultaneously and restore the default full-dataset view with a single click.
 * **Technical Architecture & Implementation:**
@@ -62,7 +62,7 @@ Below is a closer look at the core interactive elements and visual components bu
 
 ### 5. Performance & Operational Charts Grid
 
-![Performance Charts Grid](Assets/charts.png)
+![Performance Charts Grid](Assets/charts.jpg)
 
 * **Business Value & Purpose:** Translates raw transactional rows into clear, visual insights—tracking critical metrics such as **Revenue by Product Category, Customer Segmentation, Average Delivery Days, Revenue by Payment Method, Revenue Over Time, and Average Customer Rating**.
 * **Technical Architecture & Implementation:**
