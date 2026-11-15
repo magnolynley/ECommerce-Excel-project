@@ -26,7 +26,7 @@ Below is a closer look at the core interactive elements and visual components bu
 * **Business Value & Purpose:** Delivers an immediate, high-level executive snapshot of overall business health, tracking critical core metrics: **Total Revenue ($5,109,776)**, **Total Orders (5,000)**, **Average Order Value ($1,022)**, and **Repeat Customer Rate (99%)**.
 * **Technical Architecture & Implementation:**
     * **Real-Time Interactivity:** Established multi-dimensional cross-filtering via synchronized Slicers and Timelines.
-  * **Resilient Data Pipeline & Backend Calculation:** To ensure the front-end dashboard remains 100% dynamic and immune to layout shifts when users interact with global Slicers, I engineered an isolated backend calculation pipeline:
+    * **Resilient Data Pipeline & Backend Calculation:** To ensure the front-end dashboard remains 100% dynamic and immune to layout shifts when users interact with global Slicers, I engineered an isolated backend calculation pipeline:
     * **Dedicated Calculation Engine (`Customers` Tab):** Raw PivotTables aggregate metrics behind the scenes on a dedicated backend sheet, keeping the dashboard canvas clean and uncluttered.
     * **Bulletproof `INDEX/MATCH` Anchoring:** Protected against layout shifts caused by expanding or contracting PivotTable rows by locking lookups to static markers like `"Grand Total"`:
 ```excel
