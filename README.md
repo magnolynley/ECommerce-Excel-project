@@ -89,6 +89,24 @@ End Sub
 * **UI/UX & Design Engineering:** 
   * Cleaned up visual clutter by stripping away unnecessary gridlines and default field buttons.
   * Applied a consistent warm orange data series theme meticulously tailored to complement the dashboard's dark-mode layout, ensuring high legibility and a polished, executive-ready appearance.
+    
+---
+
+## Advanced DAX & Data Modeling (Power Pivot)
+To handle complex calculations and scale performance efficiently, I utilized Excel's Power Pivot data engine, building a relational star schema connecting transactional data (`Table1_2`), calendar dimensions (`date_table`), and customer dimensions (`dim_customer`). 
+
+Here are core DAX measures implemented in the model:
+
+  ```dax
+  Total Revenue := SUM(Table1_2[revenue])
+  Total Orders := DISTINCTCOUNT(Table1_2[order_id])
+  AOV := DIVIDE([Total Revenue], [Total Orders])
+  YTD Total Revenue := TOTALYTD([Total Revenue], date_table[Date])
+  AverageRating := AVERAGE(Table1_2[customer_rating])
+  ```
+### Data Model Diagram (Power Pivot Star Schema)
+![Power Pivot Diagram View](Assets/diagram.jpg)
+
 ---
 ## 📌 Key Metrics & Insights
 * **Total Revenue:** Tracked **$5,109,776** across **5,000 orders** with an Average Order Value (AOV) of **$1,022**.
