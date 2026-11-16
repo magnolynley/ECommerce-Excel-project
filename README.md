@@ -29,10 +29,12 @@ Below is a closer look at the core interactive elements and visual components bu
     * **Resilient Data Pipeline & Backend Calculation:** To ensure the front-end dashboard remains 100% dynamic and immune to layout shifts when users interact with global Slicers, I engineered an isolated backend calculation pipeline:
     * **Dedicated Calculation Engine (`Customers` Tab):** Raw PivotTables aggregate metrics behind the scenes on a dedicated backend sheet, keeping the dashboard canvas clean and uncluttered.
     * **Bulletproof `INDEX/MATCH` Anchoring:** Protected against layout shifts caused by expanding or contracting PivotTable rows by locking lookups to static markers like `"Grand Total"`:
-```excel
-=INDEX($H$7:$H$10, MATCH("Grand Total", $G$7:$G$10, 0))
-```
-  * **Front-End Shape Binding:** Front-end KPI container shapes are dynamically linked directly to these isolated helper cells via the formula bar (using =Customers!B21), guaranteeing instant, error-free reactivity across global Slicers without breaking when PivotTables expand or contract.
+
+  ```excel   
+      =INDEX($H$7:$H$10, MATCH("Grand Total", $G$7:$G$10, 0))
+   ```
+   
+   * **Front-End Shape Binding:** Front-end KPI container shapes are dynamically linked directly to these isolated helper cells via the formula bar (using =Customers!B21), guaranteeing instant, error-free reactivity across global Slicers       without breaking when PivotTables expand or contract.
 * **UI/UX & Design Engineering:** 
   * Designed custom container shapes configured with a professional, high-contrast dark-mode aesthetic.
   * Applied deliberate color theory featuring distinct peach/orange label headers paired with crisp, weighted typography to optimize visual hierarchy and direct executive attention to high-impact financial metrics.
@@ -65,7 +67,15 @@ Below is a closer look at the core interactive elements and visual components bu
 * **Business Value & Purpose:** Dramatically improves user experience (UX) by eliminating the friction of manually clearing multiple slicers individually. Enables executives and stakeholders to wipe all active filter states simultaneously and restore the default full-dataset view with a single click.
 * **Technical Architecture & Implementation:**
   * **Custom Action Interface:** Designed a sleek, custom button shape positioned strategically near the filter panel for intuitive and immediate accessibility.
-  * **VBA Macro Automation:** Programmed and linked a lightweight VBA Macro targeting active `SlicerCaches`, executing instant multi-filter clearance across the workbook to optimize workflow efficiency and user interaction.
+  * **VBA Macro Automation:** Programmed and linked a lightweight VBA macro targeting specific active `SlicerCache` objects, executing instant multi-filter clearance across the workbook:
+```vba
+Sub ClearFilters()
+    ActiveWorkbook.SlicerCaches("Timeline_Date").ClearDateFilter
+    ActiveWorkbook.SlicerCaches("Slicer_product_category").ClearManualFilter
+    ActiveWorkbook.SlicerCaches("Slicer_region").ClearManualFilter
+    ActiveWorkbook.SlicerCaches("Slicer_payment_method1").ClearManualFilter
+End Sub
+```
 ---
 
 ### 5. Performance & Operational Charts Grid
