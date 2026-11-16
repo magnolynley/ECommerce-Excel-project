@@ -108,7 +108,7 @@ End Sub
 ### 🛠️ Tools, Techniques, & Features
 
 * **Data Modeling & Architecture:** 
-  * Structured **Excel Tables**, **Power Query** and **PivotTables** as the core backend foundation.
+  * Structured **Excel Tables**, **Power Query**, **PowerPivot**, and **PivotTables** as the core backend foundation.
   * Advanced formulas and lookups (`INDEX`, `MATCH`, `SUM`, `AVERAGE`, `YEAR`, `DAX`) paired with **Helper Cells** for dynamic and flexible metric calculations.
 * **Automation & Interactivity:** 
   * **Synchronized Slicers & Timeline Filter** enabling multi-dimensional cross-filtering across Region, Date, Payment Method, and Product Category.
