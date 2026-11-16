@@ -104,7 +104,10 @@ Here are core DAX measures implemented in the model:
   YTD Total Revenue := TOTALYTD([Total Revenue], date_table[Date])
   AverageRating := AVERAGE(Table1_2[customer_rating])
   ```
-### Data Model Diagram (Power Pivot Star Schema)
+   ### 🔄 Development Evolution & Data Modeling
+* **From DAX Measures to Dimensional Modeling:** Initially explored time-intelligence functions (`TOTALYTD`), which led to scaling the architecture into a robust Star Schema. Built a dedicated `date_table` (date dimension) to power dynamic timeline filtering and granular time-series analysis across all dashboard visuals.
+  
+  
 ![Power Pivot Diagram View](Assets/diagram.jpg)
 
 ---
